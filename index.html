@@ -1,35 +1,31 @@
-<!doctype html><html lang="en"><head>
-    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Shall Rain</title><link href="demo.5889606d.css" rel="stylesheet">
-    <script>
-        document.addEventListener('keydown', function(event) {
-        //   输入处理代码 
-        let input = '';
-
-    document.addEventListener('keydown', function(event) {
-
-  // 按下回车键
-  if(event.key === 'Enter') {
-
-    // 输入值为exit
-    if(input === 'exit') {
-      
-      // 跳转到主页  
-      window.location.href = 'https://shallrain.com';
+<!doctype html><html lang="en">
+    <head>
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Shall Rain</title><link href="demo.5889606d.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="https://wenqidao.oss-cn-shanghai.aliyuncs.com/img/202309200937614.png">
+        <!-- // 我自定义的 -->
+        <script>
+            document.addEventListener('keydown', function(event) {
+            //   输入处理代码 
+            // 1. 用input变量收集输入的字符
+            let input = '';
+            document.addEventListener('keydown', function(event) {
+            // 2. 检测到回车键时,判断input内容
+            if(event.key === 'Enter') {
+            // 3. 输入为exit时,执行跳转
+            if(input === 'exit') {  
+            // 跳转到主页  
+            window.location.href = 'https://shallrain.com';
+        }
+        // 清空输入 
+        input = '';
+    } else {
+        // 4. 否则清空input,等待新输入
+        input += event.key;
 
     }
 
-    // 清空输入 
-    input = '';
-
-  } else {
-
-    // 收集输入字符
-    input += event.key;
-
-  }
-
-});
-        });
+    });
+            });
         </script>
 </head>
 
